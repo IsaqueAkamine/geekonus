@@ -1,19 +1,28 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import LottieView from 'lottie-react-native';
 
 export default function Loading() {
     return (
-        <View style={styles.container}>
-            <Text>Loading...</Text>
+        <View style={styles.animationContainer}>
+            <LottieView
+                autoPlay
+                style={{
+                    width: 400,
+                    height: 400,
+                    backgroundColor: '#eee',
+                }}
+                source={require('../assets/loading.json')}
+            />
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
+    animationContainer: {
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-    },
+        flex: 1,
+    }
 });
