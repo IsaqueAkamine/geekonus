@@ -8,7 +8,9 @@ import Dashboard from '../screens/Dashboard';
 const Stack = createStackNavigator();
 
 function Routes() {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
+
+    setTimeout(() => { setLoading(false) }, 3500)
 
     if (loading) {
         return (
