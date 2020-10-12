@@ -4,6 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Loading from '../screens/Loading';
 import Dashboard from '../screens/Dashboard';
+import Login from '../screens/Login';
+import Register from '../screens/Register';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +23,8 @@ function Routes() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
+                <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="Register" component={Register} />
                 <Stack.Screen name="Dashboard" component={Dashboard} />
             </Stack.Navigator>
         </NavigationContainer>
